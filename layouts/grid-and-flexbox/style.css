@@ -1,0 +1,86 @@
+body {
+  padding: 0 1rem 10rem;
+  font-family: 'Silkscreen', helvetica, cursive;
+  background-color: #242038;
+}
+
+.title {
+  margin-top: 5rem;
+  color: #f0f4ef;
+  text-align: center;
+}
+
+.flexbox-header {
+  background-color: #9067c6;
+  width: 75%;
+  margin: auto;
+  display: flex;
+}
+
+.flexbox-header > div {
+  margin: 10px 15px 10px;
+}
+
+.flexbox-header > :last-child {
+  margin-left: auto;
+}
+
+.grid-page {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 80px 500px 50px;
+  text-align: center;
+}
+
+/* To align items in grid, you need to apply the style to the children */
+/* Use * to select all children or apply to each child's class */
+/* Ref: https://stackoverflow.com/questions/45536537/centering-in-css-grid */
+/* .grid-page > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.header {
+  background-color: #9067c6;
+  grid-column: 1 / -1;
+}
+
+.menu {
+  background-color: #ee6352;
+  grid-column: 1 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  background-color: #f3c677;
+  grid-column: 2 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  background-color: #81c3d7;
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.grid-header > div {
+  margin: auto;
+}
+
+/* .grid-header > :last-child {
+  margin-left: auto;
+} */

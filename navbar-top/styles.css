@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  font-family: Avenir, Helvetica, 'Trebuchet MS', Verdana, sans-serif;
+}
+
+.nav {
+  position: fixed;
+  width: 100vw;
+  padding: 1rem 0 1rem;
+  margin: 0;
+  background: #123242;
+  overflow: hidden;
+}
+
+.nav a {
+  float: left;
+  text-decoration: none;
+  cursor: default;
+  color: #ffffff;
+  padding: 16px 16px;
+}
+
+#logo {
+  padding: 10px 2rem;
+}
+
+.nav-right {
+  float: right;
+}
+
+.nav button {
+  margin: 15px 1rem;
+}
+
+h3 {
+  color: black;
+}
+.para {
+  height: 200vw;
+  background-color: rgb(215, 215, 215);
+  padding: 10rem 5rem 0;
+}
