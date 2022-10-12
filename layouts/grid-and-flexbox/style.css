@@ -30,7 +30,7 @@ body {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 80px 500px 50px;
-  text-align: center;
+  /* text-align: center; */
 }
 
 /* To align items in grid, you need to apply the style to the children */
@@ -42,9 +42,12 @@ body {
   align-items: center;
 } */
 
-.header {
+.grid-header {
   background-color: #9067c6;
   grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu {
@@ -71,16 +74,10 @@ body {
   align-items: center;
 }
 
-.grid-header {
+.flex-header {
+  background-color: #5d3592;
+  grid-column: 1 / -1;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
-
-.grid-header > div {
-  margin: auto;
-}
-
-/* .grid-header > :last-child {
-  margin-left: auto;
-} */
