@@ -1,0 +1,105 @@
+/* Project setup */
+
+:root {
+  --shade1: #03312e;
+  --shade2: #037171;
+  --shade3: #009f93;
+  --shade4: #00b9ae;
+  --shade5: #02c3bd;
+  --text: #f0f4ef;
+}
+
+body {
+  background-color: var(--shade2);
+  font-family: Helvetica, sans-serif;
+  color: var(--text);
+}
+
+svg {
+  height: 4rem;
+  width: 4rem;
+}
+
+.container.minmax {
+  padding: 20px;
+}
+
+.card {
+  background-color: var(--text);
+  color: #000;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 10px 5px 5px black;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-weight: 100;
+  font-size: 2rem;
+}
+/* ======================================== */
+/* Tutorial: minmax() */
+/* ======================================== */
+
+[class*='grid-'] {
+  display: grid;
+  gap: 1rem;
+}
+
+/* 4 columns and each takes 1 fr of the screen */
+
+/* .grid-even-columns {
+  grid-template-columns: repeat(4, 1fr);
+} */
+
+/* Use auto-fit to automatically set column width, and pair with mixmax */
+/* minmax(500px, 1fr) means the smallest size is 500px wide and largest size will be 1fr */
+/* trying using minmax(500px, 500px) and see what happens */
+
+/* .grid-even-columns {
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+} */
+
+/* wrapping a min() in minmax() will adjust event more smoothly and will prevent overflow*/
+.grid-even-columns {
+  grid-template-columns: repeat(auto-fit, minmax(min(500px, 100%), 1fr));
+}
+
+/* ======================================== */
+/* Tutorial: Manipulate image with grid */
+/* ======================================== */
+
+.grid-stack {
+  place-items: center;
+}
+
+.grid-stack > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  z-index: -1;
+}
+
+.title {
+  text-align: center;
+  padding: 50px;
+  color: #000;
+  background-color: var(--text);
+  border-radius: 1000px;
+}
+
+.title > h1 {
+  font-size: 3rem;
+}
+
+.title > p {
+  margin-top: -20px;
+}
