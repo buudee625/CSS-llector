@@ -75,6 +75,7 @@ h2 {
 
 .grid-stack {
   place-items: center;
+  /* reference: https://developer.mozilla.org/en-US/docs/Web/CSS/place-items */
 }
 
 .grid-stack > * {
